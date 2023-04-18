@@ -613,6 +613,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5883589226509929155, guid: 0afbe8629e167f64591bcd2b9abbc0ae, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5883589227983723128, guid: 0afbe8629e167f64591bcd2b9abbc0ae, type: 3}
       propertyPath: m_Name
       value: Road_5 (1)
@@ -2977,6 +2981,10 @@ PrefabInstance:
     - target: {fileID: 6029313199626292016, guid: 6f9b5c1de13d21841b1169abeb9d5e49, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885544720200235388, guid: 6f9b5c1de13d21841b1169abeb9d5e49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8579011963052411028, guid: 6f9b5c1de13d21841b1169abeb9d5e49, type: 3}
       propertyPath: m_Layer
