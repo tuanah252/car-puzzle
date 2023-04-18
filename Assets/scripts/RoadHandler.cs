@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class RoadHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
     private int rotation = 0;
+    public LayerMask roadLayerMask; // thêm LayerMask để chỉ định lớp road
+
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Kiểm tra xem người dùng đã nhấp chuột trái hay chưa
+        if (Input.GetMouseButtonDown(0))
         {
-            // Tạo một Raycast từ điểm nhấp chuột trên màn hình
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Collider2D collider = Physics2D.OverlapPoint(mousePosition, roadLayerMask); // sử dụng OverlapPoint() với LayerMask
 
-            if (hit.collider != null) // Kiểm tra xem Raycast đã va chạm với một đối tượng hay không
+            if (collider != null)
             {
-
                 rotation += 90;
-                hit.collider.gameObject.transform.Rotate(0, 0, rotation);
+                collider.gameObject.transform.Rotate(0, 0, rotation);
             }
         }
     }
